@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+html
+{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-snap-stop: normal;
+}
+
+main
+{
+    margin-bottom: 5rem;
+}
+
 body   
 {
     background-color: #131316;
@@ -17,17 +29,44 @@ section
     align-content: center;
 }
 
+.sec1, .sec2, .sec3, .sec4
+{
+    scroll-snap-align: center;
+}
+
 *.hidden 
 {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
-    transition: 1.5s;
+   /* transform: translateX (-100%);*/
+    transition: 1s;
 }
 
 *.show 
 {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    /*transform: translateX(0);*/
+}
+
+.sec1
+{
+    background-color: aqua;
+}
+
+.sec2
+{
+    background-color: red;
+
+}
+
+.sec3
+{
+    background-color: purple;
+
+}
+.sec4
+{
+    background-color: aqua;
+
 }
